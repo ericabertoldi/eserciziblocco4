@@ -10,29 +10,29 @@ A071395.
  Numeri Semiperfetti: numeri uguali alla somma di alcuni dei suoi divisori propri. A005835.
  Numeri Bizzarri: numeri Semiperfetti che non sono abbondanti. A006037   */
 
-#include <iostream>
 #include "numtheory.hpp"
+#include <iostream>
 
 using namespace std;
-int main() {
+int main()
+{
     int start, stop;
-    cout<<"insert starting number"<<endl;
-    cin>>start;
-    cout<<"insert ending number"<<endl;
-    cin>>stop;
+    cout << "insert starting number" << endl;
+    cin >> start;
+    cout << "insert ending number" << endl;
+    cin >> stop;
 
-    for (int y=start; y<=stop; y++) {
-        cout<<y<<endl;
+    for (int y = start; y <= stop; y++) {
+        cout << y << endl;
         if (isAbundant(y)) {
-            cout<<" abundant"<<endl;
+            cout << " abundant" << endl;
         }
         if (isDeficient(y)) {
-            cout<<" deficient"<<endl;
+            cout << " deficient" << endl;
         }
         if (isAbundantPrimitive(y)) {
-            cout<<" abundantprimitive"<<endl;
+            cout << " abundantprimitive" << endl;
         }
     }
-
     return 0;
 }
